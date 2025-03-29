@@ -1,37 +1,4 @@
 <!DOCTYPE html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wrong Approach</title>
-  <style>
-      body {
-          font-family: Arial, sans-serif;
-          text-align: center;
-          margin-top: 50px;
-      }
-  </style>
-<script>
-  // 페이지 접근 제한을 위한 스크립트
-  window.onload = function() {
-      if (window.location.href.indexOf('https://soak-1991.github.io/soak1991.kr-8390.main') !== -1) {
-          alert('이 페이지에 접근할 수 없습니다.');
-          window.location.href = 'https://soak-1991.github.io/soak1991.kr-8390.secure'; // 접근 시 이동할 페이지
-      }
-  };
-</script>
-</head>
-<body>
-    <h1>Access Denied</h1>
-    <p>You must activate this page with personal code.</p>
-</body>
-</html>
-<script type="text/javascript">
-  $(document).ready(function (){
-      if (document.referrer == '' || document.referrer == null){
-          document.location.href = 'https://soak-1991.github.io/soak1991.kr-8390.secure';
-      }
-  })
-</script>
 <html lang="en">
 <head>
   <title>Special Operation Agency of Korea</title>
@@ -43,12 +10,22 @@
   <meta name="author" content="SOAK Administrator">
   <link rel="stylesheet" href="assets/css/main.css">
 </head>
+<script>
+  // 페이지 접근 제한을 위한 스크립트
+  window.onload = function() {
+      if (window.location.href.indexOf('https://soak-1991.github.io/soak1991.kr-8390.main/') !== -1) {
+          alert('You must activate this page with correct personal code.');
+          window.location.href = 'https://soak-1991.github.io/soak1991.kr-8390.secure/'; // 접근 시 이동할 페이지
+      }
+  };
+</script>
 <body>
+
 <!-- notification for small viewports and landscape oriented smartphones -->
 <div class="device-notification">
   <a class="device-notification--logo" href="#0">
     <img src="assets/img/SOAK logo 4.png" alt="SOAK">
-    <p>Global</p>
+    <p>SOAK</p>
   </a>
   <p class="device-notification--message">SOAK has so much to offer that we must request you orient your device to portrait or find a larger screen. You won't be disappointed.</p>
 </div>
