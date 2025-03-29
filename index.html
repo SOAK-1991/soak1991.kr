@@ -11,10 +11,16 @@
   <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <script>
-  // 페이지 접근 제한을 위한 스크립트
   window.onload = function() {
-      if (window.location.href.indexOf('https://soak-1991.github.io/soak1991.kr-8390.main/') !== -1) {
-          alert('You must activate this page with correct personal code.');
+      // 특정 페이지에 접근할 수 없는 조건
+      const allowedReferrer = 'https://soak-1991.github.io/soak1991.kr-8390.main/'; // 허용된 페이지 URL
+
+      // 이전 페이지 URL 확인
+      const referrer = document.referrer;
+
+      // 이전 페이지가 허용된 URL이 아닐 경우
+      if (referrer !== allowedReferrer) {
+          alert('You must activate this page with correct personal code');
           window.location.href = 'https://soak-1991.github.io/soak1991.kr-8390.secure/'; // 접근 시 이동할 페이지
       }
   };
