@@ -1,12 +1,21 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
+<script>
+  // 페이지 접근 제한을 위한 스크립트
+  window.onload = function() {
+      if (window.location.href.indexOf('https://soak-1991.github.io/soak1991.kr-8390.main') !== -1) {
+          alert('이 페이지에 접근할 수 없습니다.');
+          window.location.href = 'https://soak-1991.github.io/soak1991.kr-8390.secure'; // 접근 시 이동할 페이지
+      }
+  };
+</script>
+<script type="text/javascript">
+  $(document).ready(function (){
+      if (document.referrer == '' || document.referrer == null){
+          document.location.href = 'https://soak-1991.github.io/soak1991.kr-8390.secure';
+      }
+  })
+</script>
 <html lang="en">
-  <script type="text/javascript">
-    $(document).ready(function (){
-        if (document.referrer == '' || document.referrer == null){
-            document.location.href = 'https://soak-1991.github.io/soak1991.kr-8390.secure';
-        }
-    })
-  </script>
 <head>
   <title>Special Operation Agency of Korea</title>
   <meta charset="utf-8">
